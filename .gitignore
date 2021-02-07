@@ -1,0 +1,7 @@
+*.pyc
+*.pyo
+briochefood.db
+apikey.py
+recipient.py
+*.DS_Store
+*.Trash
