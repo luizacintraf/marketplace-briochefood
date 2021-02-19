@@ -7,12 +7,16 @@ import re
 import pagarme
 from validate_docbr import CPF
 from datetime import date
-from config.recipient import recipient_id as recipient_master
+try: 
+    from config.recipient import recipient_id as recipient_master
+    #athenticate api key
+    from config.apikey import api_key
+    pagarme.authentication_key(api_key)
+except:
+    pass
 import requests
 
-#athenticate api key
-from config.apikey import api_key
-pagarme.authentication_key(api_key)
+
 
 def getAddress(zipcode):
     """
